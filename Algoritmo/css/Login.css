@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Montserrat';
+  color: #fff;
+}
+
+.header {
+  background: #031727;
+  border-bottom: #094373 solid 3px;
+}
+
+.titulo {
+  font-weight: 600;
+}
+.agora {
+  font-weight: 450;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: space-evenly;
+  width: 400px;
+}
+.navbar a {
+  color: rgb(210, 210, 255);
+  text-decoration: none;
+}
+
+.corpo {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  background-image: url(../imgs/futuristic-smart-city-with-5g-global-network-technology/futurodesfoque_00000.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.corpo .container {
+  width: 21%;
+  height: 225px;
+  border-radius: 25px;
+  color: #ffffff;
+  background-image: url();
+  background-size: auto;
+}
+.corpo .login {
+  margin-left: 10px;
+  align-items: flex-end;
+  display: column;
+  margin-bottom: 100px;
+}
+.div_logo {
+  height: 25px;
+  margin: 2px 80px 2px 100px;
+  border-color: aqua;
+}
+.login #gifs {
+  height: 90%;
+  width: 20px;
+  float: left;
+  margin-left: 30px;
+  border-radius: 300px;
+}
+.login .gif {
+  float: right;
+  height: 200px;
+  width: 20px;
+}
+.login {
+  align-items: center;
+  padding: 0%;
+}
+
+.formulario {
+  align-items: center;
+  margin-top: 55px;
+  height: 100%;
+}
+.div_fome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  width: 50%;
+  background-color: white;
+  border-radius: 8px;
+  border-color: aqua;
+}
+
+#input_email {
+  border-radius: 8px;
+  margin-top: 55px;
+  border-color: aqua;
+}
+#input_senha {
+  border-radius: 8px;
+
+  border-color: aqua;
+}
+#input_a1 {
+  float: left;
+  margin-left: 20%;
+  border: 2px solid white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+#input_a2 {
+  float: left;
+  margin-left: 5%;
+  border: 2px solid white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+button {
+  background-color: white;
+  border-radius: 8px;
+  border-color: aqua;
+}
+.div_button {
+  width: 250px;
+}

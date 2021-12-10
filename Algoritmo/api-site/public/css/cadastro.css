@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+body {
+  background: linear-gradient(91.45deg, #050d14 0.66%, #0e1e29 98.24%);
+  font-family: 'montserrat';
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  /* font-family: 'Alata'; */
+  color: #fff;
+}
+
+.header {
+  background: #031727;
+  border-bottom: #094373 solid 3px;
+}
+
+.titulo {
+  font-weight: 600;
+}
+
+.agora {
+  font-weight: 450;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  color: rgb(210, 210, 255);
+  justify-content: space-evenly;
+  width: 400px;
+}
+
+.navbar a {
+  color: rgb(210, 210, 255);
+  text-decoration: none;
+}
+
+/* ----------- Banner --------------- */
+.banner {
+  background: linear-gradient(
+    91.97deg,
+    #041d31 1.18%,
+    #051726 46.97%,
+    #037f8c 98.85%
+  );
+  border-radius: 35px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10vh;
+  height: 600px;
+}
+
+.banner .container-1 {
+  background: linear-gradient(90.12deg, #041e33 0.11%, #050e15 99.9%);
+  box-shadow: 20px 15px 40px rgba(3, 127, 140, 0.1);
+  border-radius: 35px;
+  width: 98%;
+  margin-left: 1.5%;
+  height: 598px;
+}
+
+.banner .container-2 {
+  padding: 20px;
+  color: #fafafa;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------- CAMPOS --------------- */
+
+/* ----------- INPUTS /\ BUTTON --------------- */
+.input-empresa {
+  border-radius: 8px;
+  border-color: aqua;
+}
+
+.button_conta {
+  border-color: aqua;
+  margin-top: 20px;
+  border-radius: 8px;
+  margin-left: 30%;
+}
+
+/* ----------- /INPUTS /\ BUTTON --------------- */
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ----------- NOME /\ CPF /\ CNPJ --------------- */
+.box-2 {
+  /*background: red;*/
+  align-self: center;
+  padding: 4%;
+}
+
+/* ----------- /NOME /\ CPF /\ CNPJ --------------- */
+
+/* ----------- RESPONSAVEL /\ CARGO /\ SETOR /\ EMAIL --------------- */
+.box-3 {
+  /*background: lime;*/
+  align-self: center;
+  padding: 4%;
+}
+
+/* ----------- /RESPONSAVEL /\ CARGO /\ SETOR /\ EMAIL --------------- */
+
+/* ----------- SENHA /\ CONFIRMAR --------------- */
+.box-4 {
+  /*background: black;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  padding: 2%;
+  height: 1px;
+}
+
+#div_senha {
+  margin-right: 5%;
+}
+
+/* ----------- /SENHA /\ CONFIRMAR --------------- */
+
+/* ----------- /CAMPOS --------------- */
+
+/* ----------- LOADING --------------- */
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+/* ----------- /LOADING --------------- */

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+body {
+    background: linear-gradient(91.45deg, #050D14 0.66%, #0E1E29 98.24%);   
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+/*-------------cabeçalho--------------*/
+h1  {
+    color: white;
+}
+
+.header {
+    background: #031727;
+    border-bottom: #094373 solid 3px;
+    font-family: 'Montserrat';
+  }
+  
+  .titulo {
+    font-weight: 600;
+  }
+  .agora {
+    font-weight: 450;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(210, 210, 255);
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  .navbar a {
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+  }
+
+/*------------- Final cabeçalho--------------*/
+.div_1 {
+    background:  linear-gradient(91.97deg, #041D31 1.18%, #051726 46.97%, #037F8C 98.85%);
+    border-radius: 35px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10vh;
+    height: 500px;}
+.div_2{
+    background: linear-gradient(90.12deg, #041E33 0.11%, #050E15 99.9%);
+    box-shadow: 20px 15px 40px rgba(3, 127, 140, 0.1);
+    border-radius: 35px;
+    width: 98%;
+    margin-left: 1.5%;
+    height: 498px;
+}
+.div_3{
+    padding: 20px; color: #fafafa;
+}
+.div_4{
+    width: 50%; 
+    float: left; 
+}
+.div_4 .p{
+    font-family: thin; margin-top: -20px;
+}
+#input_prod_anual{ background-color: transparent; 
+    border: solid 1px #FFF;
+    height: 50px;
+    width: 90%;
+    outline: none;
+    color: #fafafa;
+    font-size: 16px;
+}
+#input_vendas_anual{
+    background-color: transparent; 
+    border: solid 1px #FFF;
+    height: 50px;
+    width: 90%;
+    outline: none;
+    color: #fafafa;
+    font-size: 16px;
+
+}
+button{background: linear-gradient(90deg, #094373 0%, #037F8C 100%);
+    border: none;
+    width: 91%;
+    font-family: bold;
+    color: #fafafa;
+    height: 50px;
+}
+#result{
+    width: 35%; 
+    margin-left: 5%;
+    background-color: #037F8C; 
+    float: left;
+    background-color: #0E1E2A;
+    border-radius: 52px;
+    height: 350px;
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 50ox;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#result .img_logo{
+    margin-top: 80px;
+    margin-left:90px;
+    width: 50%;
+    height: 50%;
+
+}

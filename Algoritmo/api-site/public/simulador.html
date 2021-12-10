@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador</title>
+        <link rel="stylesheet" href="css/orcamento.css">
+        <link rel="icon" href="imgs/logoApoena.png">
+
+        <script type='text/javascript' src='https://widget.freshworks.com/widgets/72000000689.js' async defer></script>
+
+    </head>
+    <body style="background: linear-gradient(91.45deg, #050D14 0.66%, #0E1E29 98.24%); font-family: montserrat; ">
+        <!-- --------------CABEÇALHOO------------------ -->
+    <div class="header">
+        <div class="container">
+            <h1 class="Titulo">
+                <img style="height: 30px" src="imgs/logoApoena.png" alt="">
+                Apoena
+            </h1>
+            <ul class="navbar">
+                <li class="agora">
+                    <a href="index.html">Início</a>
+                </li>
+                <li style="
+                border-bottom: 0.5px solid #04CCCC" class="agora">
+                    <a href="simulador.html">Orçamento</a>
+                </li>
+                <li class="agora">
+                    |
+                </li>
+                <li class="agora">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div style="        
+            background:  linear-gradient(91.97deg, #041D31 1.18%, #051726 46.97%, #037F8C 98.85%);
+            border-radius: 35px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 3vh;
+            height: 500px;
+        ">
+            <div style="
+                background: linear-gradient(90.12deg, #041E33 0.11%, #050E15 99.9%);
+                box-shadow: 20px 15px 40px rgba(3, 127, 140, 0.1);
+                border-radius: 35px;
+                width: 98%;
+                margin-left: 1.5%;
+                height: 498px;
+            ">
+                <div style="padding: 20px; color: #fafafa;">
+                    <div style="width: 50%; float: left; ">
+                        <h1>Simulação de lucros</h1>
+                        <p style=" margin-top: -20px;">
+                            Faça uma rápida simulação e entenda o quanto você perde no ano por causa do desperdicio e a diferença que nossa solução traria
+                            para seu negócio
+                        </p>
+                        <br>
+                        <div>
+                            <p>Quanto você compra por ano? (em kg)</p>
+                            <input  id="input_prod_anual"
+                                style=" 
+                                background-color: transparent; 
+                                border: solid 1px #FFF;
+                                height: 50px;
+                                width: 90%;
+                                outline: none;
+                                color: #fafafa;
+                                font-size: 16px;
+                            "> 
+                        </div>
+                        <div>
+                            <p>Quanto você vende por ano? (em R$)</p>
+                            <input id="input_vendas_anual"
+                                style=" 
+                                background-color: transparent; 
+                                border: solid 1px #FFF;
+                                height: 50px;
+                                width: 90%;
+                                outline: none;
+                                color: #fafafa;
+                                font-size: 16px;
+                            "> 
+                            <br><br>
+                        </div>
+                        <button onclick = "simulacao()"
+                            style="background: linear-gradient(90deg, #094373 0%, #037F8C 100%);
+                            border: none;
+                            width: 91%;
+                            font-family: bold;
+                            font-size: 30px;
+                            color: #fafafa;
+                            height: 50px;
+                            cursor: pointer;
+                            ">
+                            Simular
+                        </button>
+                    </div>
+                    <div id="result" 
+                        style="width: 35%; 
+                        margin-left: 5%;
+                        background-color: #037F8C; 
+                        float: left;
+                        background-color: #0E1E2A;
+                        border-radius: 52px;
+                        height: 350px;
+                        margin-top: 40px;
+                        padding: 25px;
+                    ">
+                        <img src="imgs/Frame.png" alt="ilustração" style="margin-left: -15px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+        function simulacao(){
+        // variaveis
+        var producao_total = Number(input_prod_anual.value); // o que ele produz
+        var lucro_sem = Number(input_vendas_anual.value); // quanto vende 
+        // validação
+        if (producao_total == 0 || lucro_sem == 0) {
+            alert('Insira os dados para realizar a simulação!')
+        } else {
+            // cálculos
+            var lucro_com = lucro_sem/0.7; //lucro usando apoena
+            var prod_real = producao_total * 0.7; //produção com desconto de 30% de desperdicio
+            var prod_estragado = producao_total - prod_real;
+            var lucro_perdido = lucro_com - lucro_sem;
+            // conteudo
+            result.innerHTML = `
+                <p style=" margin-top: 30px; margin-left: 50px;font-size: 22px">Em um ano usando apoena, <br> você lucraria:</p>
+                <span style="font-family: bold; font-size: 30px; margin-left: 50px;">R$ ${(lucro_com).toFixed(0)} </span>
+                <div style="font-family: thin; font-size: 20px; margin-left: 50px; margin-top: 30px;"">
+                    <li> 
+                        Produto perdido:<b> ${(prod_estragado).toFixed(0)}kg </b> 
+                    </li> 
+                    <li> 
+                        Lucro perdido: <b>R$${(lucro_com - lucro_sem).toFixed(0)}</b> 
+                    </li>  
+                    <br>
+                    <p> Grande parte dessas perdas são ocasionada pela falta de controle da temperatura
+                </div>
+            `;
+        }
+    }
+</script>
+
+
+<script>
+    // HELP DESK ----------------------------------- //
+  
+        window.fwSettings={
+        'widget_id':72000000689
+        };
+        !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()  
+  
+    //-----------------------------------------------//
+    </script>

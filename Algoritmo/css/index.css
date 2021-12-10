@@ -1,0 +1,537 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Alata';
+    color: #fff;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  /* --- cabeçalho ------- */
+  .header {
+    background: #031727;
+    border-bottom: #094373 solid 3px;
+    font-family: 'Montserrat';
+  }
+  
+  .titulo {
+    font-weight: 600;
+  }
+  .agora {
+    font-weight: 450;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(210, 210, 255);
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  .navbar a {
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+  }
+  /* ----------- Banner --------------- */
+  
+  .banner {
+    /* height: 400px; estava 40px, mas para a tela inicial ficar cerinha eu coloquei 90vh */
+    height: 70vh;
+  }
+  .banner .container {
+    width: 100%;
+    display: flex;
+  }
+  
+  .banner .esq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+    width: 40%;
+    height: 300px;
+  }
+  .banner .esq .botao1 {
+    border: #fff solid 1px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 150px;
+  }
+  
+  .botao1:hover {
+    background-color: #04cccc;
+    transition: 0.5s ease-in-out;
+    color: #000;
+    border: #000 solid 1px;
+  }
+  
+  .banner .esq .text {
+    margin: 25px auto;
+    font-size: 40px;
+    height: 200px;
+    width: 150px;
+  }
+  .banner .container .dir {
+    background-image: url(../imgs/caminhãov2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 450px;
+    display: flex;
+  }
+  
+  .sp_dia {
+    margin-left: 550px;
+    font-size: 22px;
+  }
+  .dia_a_dia {
+    width: 95%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  .dia_a_dia img {
+    height: 40%;
+  }
+  .text {
+    margin-left: 10px;
+  }
+  .dia1 {
+    width: 20%;
+    background-color: #013333;
+    height: 200px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .dia2 {
+    width: 20%;
+    background-color: #014040;
+    height: 200px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .dia3 {
+    width: 20%;
+    background-color: #014545;
+    height: 200px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .dia4 {
+    width: 20%;
+    background-color: #038c8c;
+    height: 200px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .dia5 {
+    width: 20%;
+    background-color: #04cccc;
+    height: 200px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  /* ------------------------- TELA 2 QUE LEVA AO SIMULADOR colocar a imagem */
+  
+  .containertela2 {
+    /* background-color: crimson; */
+    margin-left: 80px;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 80px;
+  }
+  
+  .containertela2 h1 {
+    font-size: 25px;
+    font-weight: bold;
+    width: 70%;
+  }
+  
+  .containertela2 p {
+    color: rgba(255, 255, 255, 0.651);
+    width: 70%;
+  }
+  .card-content {
+    margin: auto;
+    width: 65%;
+  }
+  
+  .card-img {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+  }
+  
+  .caixatela2 {
+    padding: 30px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 20px;
+    background: linear-gradient(90.12deg, #041e33 0.11%, #050e15 99.9%);
+    border-radius: 20px;
+    display: flex;
+  }
+  
+  .cifrao {
+    width: 37%;
+    margin: 0px 0px 0px 400px;
+    display: flex;
+    margin-bottom: 15%;
+  }
+  
+  .botaoCalcular {
+    width: 300px;
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border: solid 3px #fff;
+  }
+  
+  .serviço {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    margin-left: 350px;
+    margin-top: 80px;
+  }
+  
+  .textoserviço {
+    font-size: 15px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.582);
+    margin-top: 10px;
+  }
+  
+  .box-container {
+    width: 80%;
+    display: flex;
+  }
+  
+  .box-img {
+    width: 30%;
+    margin-top: 20px;
+  }
+  
+  .container-serviço {
+    width: 80%;
+    margin-top: 55px;
+    height: 60%;
+  }
+  
+  .box {
+    width: 30%;
+    height: 120px;
+    border-radius: 15px;
+    background: rgba(22, 44, 60, 1);
+    text-align: center;
+    margin: auto;
+  }
+  
+  /* ------------------------- beneficios --------------- */
+  
+  .texto {
+    display: flex;
+    padding: 20px;
+    border: solid white 2px;
+    align-self: center;
+    justify-content: center;
+    color: #fff;
+  }
+  /* ------------------- quem somos nos ------------ */
+  .quem_somosa {
+    display: flex;
+    /* background-color: green; */
+    height: 47.5vh;
+    width: 100%;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  
+    /* margin-top: 25px; */
+  }
+  /* ----------------- .cimaesquerda---------------- */
+  .cimaesquerda {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+  }
+  .cimaesquerda img {
+    height: 28vh;
+    background-size: 100;
+  }
+  .cimaesquerda p {
+    /* background-color: red; */
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    border: turquoise solid 2px;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 18%;
+    margin-bottom: 2%;
+    text-align: center;
+  }
+  .imagemlinha2 {
+    margin-left: 50px;
+  }
+  /* ----------------- cimad direita ---------- */
+  .cimadireita {
+    height: 100%;
+    width: 70%;
+    padding: 0% 0% 0% 5%;
+    align-items: center;
+  }
+  .cimadireita h1 {
+    font-weight: 900;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: 0% 20%;
+  }
+  .cimadireita p {
+    margin: 0% 10%;
+    justify-content: space-between;
+    font-size: 22px;
+  }
+  .saiba {
+    height: 15vh;
+    width: 50vh;
+    margin: 10%;
+    border: white;
+  }
+  /* ---------------------- parte de baixo ----------------- */
+  
+  .baixoesquerda {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 5%;
+  }
+  .baixoesquerda p {
+    margin: 10% 15% 0% 30%;
+    height: 45%;
+    width: 40%;
+    font-weight: 900;
+    font-size: 25px;
+    /* background-color: red; */
+  }
+  .baixoesquerda input {
+    height: 10%;
+    width: 30%;
+    background-color: black;
+    border-radius: 10px;
+    border-color: darkturquoise;
+    color: whitesmoke;
+    margin: 0% 0% 0% 30%;
+  }
+  .baixoesquerda button {
+    height: 10%;
+    width: 15%;
+    background-color: black;
+    border-radius: 10px;
+    border-color: darkturquoise;
+    color: whitesmoke;
+    /*margin: 0% 0% 0% 30%;*/
+  }
+  .baixoesquerda div {
+    height: 10%;
+    width: 15%;
+    background-color: black;
+    border-radius: 10px;
+    border-color: darkturquoise;
+    color: whitesmoke;
+    margin-left: 80%;
+    margin-top: -6%;
+  }
+  .baixodireita {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+  }
+  .baixodireita img {
+    margin-left: 30%;
+    max-height: 50vh;
+    max-width: 50vh;
+    width: auto;
+    height: auto;
+  }
+  
+  /* Tela 5 (ou rodapé) */
+  .tela_5 {
+    background-color: #014545;
+    width: 100%;
+    height: 90vh;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .tela_duvida {
+    color: #fff;
+    margin-left: 90px;
+    margin-bottom: 200px;
+    font-size: 20px;
+  }
+  
+  .tela_duvida p {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+  
+  }
+  
+  .duvida_inp {
+    margin-top: 50px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .duvida_inp div {
+    border: #fff solid 1px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    width: 500px;
+    
+  }
+  .tela_duvida h1 {
+    width: 100%;
+  }
+  
+  #ctt_nome {
+    margin-bottom: 30px;
+    height: 7vh;
+    width: 38vw;
+    background-color: #01333300;
+    border: solid #fff 1px;
+  }
+  
+  #ctt_email {
+    margin-bottom: 30px;
+    height: 7vh;
+    width: 38vw;
+    align-items: center;
+    justify-content: left;
+    background-color: #01333300;
+    border: #fff solid 1px;
+  }
+  
+  #ctt_mensagem {
+    margin-bottom: 30px;
+    height: 30vh;
+    width: 38vw;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: #01333300;
+    border: #fff solid 1px;
+  }
+  
+  #ctt_enviar {
+    height: 7vh;
+    width: 39vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #01333300;
+    border: #fff solid 1px;
+    color: #fff;
+  }
+  
+  #ctt_mensagem::placeholder {
+    color: #fff;
+    text-align: center;
+  }
+  
+  #ctt_nome::placeholder {
+    color: #fff;
+    text-align: center;
+  }
+  
+  #ctt_email::placeholder {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #031727;
+    width: 100%;
+    height: 35vh;
+    margin-top: 120px;
+  }
+  
+  #div_coluna1 {
+    margin-top: 25px;
+    /*background-color: red;*/
+    width: 100px;
+  }
+  
+  #div_coluna2 {
+    margin-top: 25px;
+    width: 100px;
+    /*background-color: red;*/
+  }
+  
+  #div_coluna3 {
+    margin-bottom: 25px;
+    margin-right: 60%;
+    width: 120px;
+    /*background-color: red;*/
+  }
+  
+  .footer_2 {
+    background-color: #014545;
+    width: 100%;
+    height: 5vh;
+    margin-top: -18px;
+    padding: 0;
+  }
+  
+  .footer_2 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tela_5{
+    margin-top: 2vh;
+  }

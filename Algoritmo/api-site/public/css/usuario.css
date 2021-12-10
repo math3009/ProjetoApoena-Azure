@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        font-family: 'Montserrat';
+        color: #fff;
+    }
+
+    .bg {
+        margin: auto;
+        text-align: center;
+        display: flex;
+      }
+    .bg .esq {
+        width: 100%;
+        height: 80vh;
+        margin-top: 30px;
+    }
+    .bg .esq h1{
+        color: black;
+    }
+    .bg .esq .titulo {
+        width: 80%;
+        height: 50px;
+    }
+    .bg .esq .container {
+        margin-top: 30px;
+        background-color: #094373;
+        border-radius: 25px;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bg .esq .container #botoes {
+        width: 100%;
+        height: 85%;
+    }
+    #textinho {
+        font-size: 28px;
+    }
+    .bg .esq button {
+        width: 50%;
+        height: 50px;
+        background-color: #031727;
+        border-radius: 25px;
+        font-size: 36px;
+        color: white;
+    }
+    .bg .dir {
+        width: 100%;
+        height: 85vh;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+  .area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    display: inline-block;
+    width: 80%;
+    height: 90%;
+    padding: 5px;
+  }
+  
+  .graph {
+    background-color: #eaeaea;
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+    padding: 5px;
+  }
+  
+  /* Header */
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .header {
+    background: #031727;
+    border-bottom: #094373 solid 3px;
+  }
+  .titulo {
+    font-weight: 600;
+  }
+  .agora {
+    font-weight: 450;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  .navbar a {
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+  }
+  
+  .box {
+      color: #fff;
+      width: 28%;
+      height: 200px;
+      float: left;
+      margin: 25px 2% 2% 3%;
+  }
+  
+  .box h1 {
+    font-size: 45px;
+    margin: 40px 10px 0px 10px;
+    border-bottom: solid #00000012 3px;
+    font-weight: lighter;
+  }
+  .box h3 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  
+  .yellow {
+    background-color: #e2cb00;
+  }
+  
+  .green {
+    background-color: #4caf50;
+  }
+  .red {
+    background-color: #f44336;
+  }
+  
+  

@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #031727;
+    font-family: 'Alata'; color: #fff;
+}
+ /* --- cabeçalho ------- */
+.header{
+    background: #031727;
+    border-bottom: #094373 solid 3px;
+    font-family: 'Montserrat';
+}
+
+.titulo {
+    font-weight: 600;
+}
+.agora {
+    font-weight: 450;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(210, 210, 255);
+    justify-content: space-evenly;
+    width: 400px;
+}
+.navbar a{
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+}
+.banner {
+    width: 99vw;
+    height:100vh;
+    background-color: #031727;
+  
+}
+#container
+{
+    width: 100%;
+    height:100%;
+    margin-top:4px;
+}
+.tex_um{
+height: 100%;
+width: 33%;
+
+float: right;}
+    .um{
+         height: 50%;
+         width: 100%;
+         border: #094373 solid 3px;
+         border-radius:20px;
+         
+         
+    }
+        .missao{
+            height: 50%;
+            width: 100%;
+            border: #094373 solid 3px;
+            border-radius:20px;
+           
+           
+        }
+       
+.tex_dois{
+    height: 100%;
+    width: 33.6%;
+
+  
+    float: left;}
+    .dois{
+         height: 50%;
+         width: 100%;
+         border: #094373 solid 3px;
+         border-radius:20px;
+         
+         
+    }
+        .visao{
+                height: 50%;
+                width: 100%;
+                border: #094373 solid 3px;
+                border-radius:20px;
+               
+                
+        }
+.tex_tres{
+    height: 100%;
+    width: 33% ;
+    
+    float: left;
+    }
+    .tres{
+         height: 50%;
+         width: 100%;
+         border: #094373 solid 3px;
+         border-radius:20px;
+    }
+    .tres span{
+        color: wheat;
+        font-weight: bold;
+    } 
+        .valor{
+        height: 50%;
+        width: 100%;
+        border: #094373 solid 3px;
+        border-radius:20px;
+        
+         }
+         .valor p{
+             margin-left: 10%;
+             display: flex;
+             justify-content: space-evenly;
+             width:75%;
+         }
+         
+p{
+    justify-content: center;
+    display: flex;
+    font-weight: bold
+    ;
+}
+.imagem {
+    height: 100px;
+    margin-left: 175px;
+    margin-top: 25px;}
+.anonimo{
+    height:20px;
+}
+button {
+   
+    border-radius: 200px;
+   border:  #094373 solid 3px;
+    margin-left: 180px;
+    background-color:#094373 ;
+    color: blanchedalmond;
+    height: 30px;
+}
+.visao{
+    
+}
+
+.visao P{
+    margin-left: 10%;
+  
+}

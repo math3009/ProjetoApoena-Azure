@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #094373;
+    font-family: 'Alata';
+    color: #fff;
+    background-image: url(../imgs/truck-2755172.jpg);
+
+  }
+
+.header {
+    background: #031727;
+    border-bottom: #094373 solid 3px;
+    font-family: 'Montserrat';
+  }
+  
+  .titulo {
+    font-weight: 600;
+  }
+  .agora {
+    font-weight: 450;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    color: rgb(210, 210, 255);
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  .navbar a {
+    color: rgb(210, 210, 255);
+    text-decoration: none;
+  }
+.empresa_nome{
+    height: 10vh;
+    width: 100vw;
+ color: white;
+}
+.empresa_nome h2{
+  text-align: center;
+}
+
+#meio{
+    height: 60vh;
+    width: 25vw;
+    background-color: #031727 ;
+    border-radius: 50px;
+   position: absolute;
+    margin-left: 37vw;
+    color: black;
+    margin-top: 5%;
+    display: block;
+    border: aqua solid 2px;
+    opacity: 0.8;
+    
+}
+#meio h2{
+    margin-left: 20%;
+    color: white;
+}
+#meio .botao1{
+    height: 7vh;
+    width: 15vw;
+    background-color: black;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    margin-left: 9vh;
+}
+input{
+    height: 6vh;
+    width: 15vw;
+    background-color: black;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    margin-left: 9vh;
+    margin-top: 8%;
+    border: black;
+}
+#inpput ::placeholder{
+    color: white
+    ;
+}
+.botao1{
+    margin-top: 5%;
+    margin-left: 10vh;
+    text-decoration: none;
+
+}
+ .botao1 a {
+  text-decoration: none;
+  color: whitesmoke;
+ }
+
+
+
+.botao3{
+    width: 10vw;
+    height: 5vh;
+    margin-left: 15vh;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+
+}
+a:hover{
+  height: 80%;
+  width: 80%;
+}
+#tela2{
+  height: 50vh;
+  width: 25vw;
+  background-color: #031727 ;
+  margin-left: 37vw;
+  color: black;
+  margin-top: 5%;
+  display: none;
+  border-radius: 50px;
+  border: #7fffd4 solid 2px;
+  opacity: 0.8;
+}
+span{
+ 
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+} 
+.botao0{
+width: 15%;
+height: 10%;
+border-radius: 50%;
+margin-left: 5%;
+margin-top: 2%;
+background-image: url("https://image.flaticon.com/icons/png/512/1/1112.png" );
+}

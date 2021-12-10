@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../imgs/logoApoena.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoena | Avisos</title>
+
+    <script src="../js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./dashboards.css">
+
+    <script type='text/javascript' src='https://widget.freshworks.com/widgets/72000000689.js' async defer></script>
+
+    <!-- 
+        href="../assets/icon/favicon.ico"
+        <script src="../js/funcoes.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    -->
+</head>
+
+<body onload="validarSessao(), exibir_placa() " style="background-color: #161618;">
+
+
+        <div class="janela">
+            <div class="header-left">
+                <h1>Apoena</h1>
+    
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
+    
+                <div class="btn-nav-white">
+                    <a href="./cards.html">
+                        <h3>Seus Caminhões</h3>
+                    </a>
+                </div>
+    
+                <div class="btn-nav-white">
+                    <a href="dashboard.html">
+                        <h3>Relatório de viagens</h3>
+                    </a>
+                </div>
+    
+                <div class="btn-nav">
+                    <a href="./mural.html">
+                        <h3>Gerenciar viagens</h3>
+                    </a>
+                </div>
+              
+    
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+    
+
+        </div>
+
+        <div class="dash-right">
+
+            <div class="avisos">
+                <div class="container">
+                    <!-- <h1>Cadastrar caminhão</h1> -->
+                    <div class="div-form">
+                        
+                        <div class="div_labels">
+                            <label>
+                                <h3>Cadastre seu caminhão:</h3>
+                                Placa:
+                                <br> 
+                                <input name="titulo" id="in_placa" maxlength="8" type="text" placeholder="AAA-0000" disabled>
+                            </label>
+                            <br>
+                            <label>
+                                <h3>Inicie sua viagem</h3>
+                                Nome do produto: 
+                                <br>
+                                <input name="nome_prod" id="nome_prod" maxlength="45" type="text" placeholder="Morango, Leite..." disabled>
+                                <br>
+                                <br>
+                                Placa do caminhão 
+                                que realizara a viagem: 
+                                <br>
+                                <input name="placaviagem" id="placaviagem" maxlength="45" type="text" placeholder="aaaa000" disabled> 
+                                <br>
+                                <br>
+                                Data de inicio: 
+                                <br>
+                                <input name="dt_inicio" id="dt_inicio" maxlength="45" type="date" placeholder="2021-11-29" disabled>
+                            </label>
+                            <br>
+                            <label>
+                                <h3>Finalize sua viagem</h3>
+                               Número de identificação da viagem 
+                               <br>
+                               <input type="text" id="id_viagem" placeholder="viagem que voce já realizou"
+                               disabled>
+                               <br>
+                               <br>
+                                Data de chegada: 
+                                <br>
+                                <input name="titulo" id="dt_chegada" maxlength="45" type="date"
+                                placeholder="2021-11-04" disabled>
+                            </label>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="div_botoes_cadastro">
+                            <button id="sumir">Lista de produtos
+                                    <div class="grafico1" id="mostrar">
+                                    <div class="prod_1" id="mostrar">Morango</div>
+                                    <div class="prod_2" id="mostrar">Leite</div>
+                                    <div class="prod_3" id="mostrar">Carne</div>
+                                    <div class="prod_4" id="mostrar">Banana</div>
+                                    <div class="prod_5" id="mostrar">Manga</div>
+                            </button>
+                            <div id="sumir">
+                            <button >Lista dos caminhões </button>
+                                <div class="grafico1" id="mostrar">
+                                  <div  id="placas">
+                                    <div id="titulo_camnhao"></div>
+                            </div>
+                                  </div>
+                                  </div>
+                            </button>
+                            <button onclick="cadastrar_caminhaotela()">Cadastre seu caminhão</button>
+                            <button onclick="iniciar_viagem()">Inciar viagem</button>
+                            <button onclick="finalizar_viagem()">Finalizar viagem</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
+
+
+
+            <!-- create table caminhao(
+    idcaminhao int primary key auto_increment,
+    placa char(8),
+    fkempresa int
+    ) auto_increment = 100;
+
+    create table produto(
+    idproduto int primary key auto_increment,
+    nome varchar(45),
+    placaviagem varchar(45),
+    tempmax decimal(4,2),
+    tempmin decimal(4,2)
+    ) auto_increment = 300;
+   
+    create table viagem (
+    idviagem int primary key auto_increment,
+    datainicio date,
+    datafim date,
+    fkproduto int,
+    fkcaminhao int
+    ) auto_increment = 400; -->
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+   
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    // variaves para mudar o disabled das inputs
+    var lista_frutas=[]
+    var cheque_produto= false;
+    var cheque_caminhao= false;
+    var cheque_viagem= false;
+    function cadastrar_caminhaotela() {
+        nome_prod.value= ''
+        placaviagem.value= ''
+        dt_chegada.value= ''
+        dt_inicio.value= ''
+        id_viagem.value = ''
+        cheque_produto= false;
+        cheque_viagem= false;
+        var caminhao_existe= false
+    
+        var placa = document.querySelector("#in_placa");
+        var produto = document.querySelector("#nome_prod");
+        var placaviagem1 = document.querySelector("#placaviagem");
+        var inicio_viagem = document.querySelector("#dt_inicio");
+        var fim_viagem = document.querySelector("#dt_chegada");
+        
+        for(var contador1= 0; contador1 < lista_caminhao.length; contador1++ ){
+            if(in_placa.value== lista_caminhao[contador1]){
+                caminhao_existe=true
+            }
+        }
+        
+        if(cheque_caminhao==false){
+        placa.disabled = false;
+        produto.disabled = true;
+        placaviagem.disabled = true;
+        inicio_viagem.disabled = true;
+        fim_viagem.disabled = true;
+        id_viagem.disabled= true;
+        cheque_caminhao=true;
+    }
+        else if(caminhao_existe==true){
+            alert(` o caminhao ${in_placa.value} ja se encontra cadastrado`)
+        }
+
+        else if(in_placa.value.length==7 ){
+            cadastrar_caminhao();
+            alert(`Caminhão ${in_placa.value} cadastrado com sucesso`)
+            placa.disabled=true
+            cheque_caminhao= false
+            placa.value= ''}
+
+            else if(in_placa.value.length< 7 && in_placa.value.length >1 ){
+                alert(`a placa precisa ter  7 digitos`)
+                cheque_caminhao = false
+        }
+        else if(in_placa.value.length >7 ){
+            alert(`a placa precisa  ter 7 digitos`)
+
+        }else{
+            placa.disabled = true;
+            cheque_caminhao=false;
+        }
+    }
+
+
+    
+    function finalizar_viagem() {
+        cheque_produto= false;
+         cheque_caminhao= false;
+         nome_prod.value= ''
+        placaviagem.value= ''
+        dt_inicio.value= ''
+        
+        
+
+        var idviagem= id_viagem.value
+        var inicio = dt_inicio.value
+        var fim = dt_chegada.value
+        var placa = document.querySelector("#in_placa");
+        var produto = document.querySelector("#nome_prod");
+        var placaviagem1= document.querySelector("#placaviagem");
+        var inicio_viagem = document.querySelector("#dt_inicio");
+        var fim_viagem = document.querySelector("#dt_chegada");
+        id_viagem.disabled= false
+        placa.disabled = true;
+        produto.disabled = true;
+        placaviagem.disabled = true;
+        inicio_viagem.disabled = true;
+        fim_viagem.disabled = false;
+
+        if(cheque_viagem==false){
+        id_viagem.disabled= false
+        placa.disabled = true;
+        produto.disabled = true;
+        placaviagem.disabled = true;
+        inicio_viagem.disabled = true;
+        fim_viagem.disabled = false;
+        cheque_viagem=true;
+    }
+    else if(inicio.indexOf("/") > -1 || fim.indexOf("/")> -1 ){
+    alert(`não insira "/" nas datas utilize traços(-) ` )
+    }
+    else if(idviagem.length <= 0 && fim_viagem.length >=1){
+        alert(' insira o id da sua viagem')
+    }else if(fim.length <= 0 && id_viagem.value.length >=1){
+        alert(' insira o id da sua viagem')
+    }
+    else if( fim.length<=0 && idviagem.length <=0){
+        fim_viagem.disabled = true;
+        id_viagem.disabled= true;
+        cheque_viagem=false;
+
+    }
+    else{
+        // fim_viagem.disabled = true;
+        // id_viagem.disabled= true
+        fim_da_viagem()
+        fim=''
+        idviagem= ''
+         
+        // alert(` viagem finalizada com sucesso`);
+        
+    }
+}
+function cadastrar_caminhao() {
+        // aguardar();
+
+        // var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
+
+        
+        var placa= in_placa.value
+        var fkempresa = sessionStorage.getItem("FKEMPRESA");
+      
+        fetch("/usuarios/cadastrar_caminhao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                placa: placa,
+                fkempresa: fkempresa,
+                
+                
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // window.alert("Cadastro realizado com sucesso!");
+                // window.location = "mural.html";
+                // finalizarAguardar();
+                exibir_placa()
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+              
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+    }
+    function cadastrar_viagem() {
+        var inicioviagem = dt_inicio.value
+        var nomeproduto = nome_prod.value
+        var placaviagem1=  placaviagem.value
+
+        fetch("/usuarios/cadastrar_viagem", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                inicioviagem:inicioviagem,
+                nomeproduto:nomeproduto,
+                placaviagem:placaviagem1,
+                
+                
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+
+            if (resposta.ok) {
+                window.alert("Cadastro da viagem realizado com sucesso!");
+                // window.location = "mural.html";
+                // finalizarAguardar();
+                exibir_idviagem_usuario();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro da viagem!");
+              
+            }
+        }).catch(function (resposta) {
+            alert(`problemas ao iniciar a sua viagem`)
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+
+    
+    }
+    function fim_da_viagem(){
+        var idviagem= id_viagem.value
+        var fim_viagem= dt_chegada.value
+
+        fetch("/usuarios/fim_da_viagem", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idviagem: idviagem,
+                fim_viagem: fim_viagem,                
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+
+            if (resposta.ok) {
+                window.alert("Viagem finalizada com sucesso!");
+                // window.location = "mural.html";
+                // finalizarAguardar();
+                exibir_placa()
+            } else {
+                throw ("Houve um erro ao tentar finalizar a viagem!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+
+    
+    }   
+    var idviagem1= 0
+    function exibir_idviagem_usuario() {
+        // aguardar();
+
+    
+        
+
+
+        fetch("/usuarios/exibir_idviagem_usuario", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+           
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    idviagem1= json[0].idviagem
+                    alert( `O numero de identificação desta viagem é ${idviagem1}`)
+
+            
+                 
+
+
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao exibir id!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    
+    function iniciar_viagem() {
+        cheque_caminhao=false;
+cheque_viagem= false;
+        var nome = nome_prod.value
+        var viagem_placa= placaviagem.value
+        var iviagem = dt_inicio.value
+        var placa = document.querySelector("#in_placa");
+        var produto = document.querySelector("#nome_prod");
+        var inicio_viagem = document.querySelector("#dt_inicio");
+        var fim_viagem = document.querySelector("#dt_chegada");
+        dt_chegada.value= ''
+        id_viagem.value = ''
+        in_placa.value= ''
+        
+        placa.disabled = true;
+        produto.disabled = false;
+        placaviagem.disabled = false;
+        inicio_viagem.disabled = false;
+        fim_viagem.disabled = true;
+        id_viagem.disabled= true;
+        
+        if(cheque_produto== false){
+            // placa.disabled = true;
+            produto.disabled = false;
+            placaviagem.disabled = false;
+            inicio_viagem.disabled = false;
+            // fim_viagem.disabled = true;
+             cheque_produto= true;
+        }
+            else if(nome.trim().length <= 0 && viagem_placa.trim().length >=1){
+                alert('insira o nome do seu produto')
+            }
+            else if(nome.trim().length <= 0 && iviagem.trim().length >=1){
+                alert('insira o nome do seu produto')
+            }
+            else if(iviagem.trim().length==0 && nome.trim().length>=1){
+                alert('insira a data de inicio da sua viagem')
+            }  
+            
+            else if(iviagem.trim().length==0 && viagem_placa.trim().length>=1){
+                alert('insira a data de inicio da sua viagem')
+            }
+            else if(viagem_placa.trim().length == 0 && iviagem.trim().length >=1 ){
+                alert( 'insira do caminhão que realizara a viagem')
+            }
+            else if(viagem_placa.trim().length == 0 && nome.trim().length >=1 ){
+                alert( 'insira do caminhão que realizara a viagem')
+            }
+            
+        
+        
+        else if ( nome.trim().length<=0 && viagem_placa.trim().length<=0 && iviagem.trim().length<= 0)  {
+            produto.disabled= true;
+            placaviagem.disabled= true;
+            inicio_viagem.disabled= true;
+            cheque_produto = false;
+
+            // alert(`produto cadastrado`)
+        }
+        else{
+            cadastrar_viagem()
+            nome= ``
+            viagem_placa=``
+            inicio_viagem=``
+
+            
+            
+        }
+        
+       
+    }
+    var lista_caminhao= []
+    
+    function exibir_placa() {
+        // aguardar();
+
+        var fkempresa= sessionStorage.FKEMPRESA
+        
+
+
+        fetch("/usuarios/exibir_placa", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkempresa:fkempresa,
+
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    
+                    for(var contador= 0;contador < json.length ; contador++){
+                    lista_caminhao.push(json[contador].placa)
+                    placas.innerHTML+= ` <i>${lista_caminhao[contador]} </i> <br>  <div class="divisoria"> </div> <br> `
+                    titulo_camnhao.innerHTML= `<h3> Placas </h3>`
+                    }
+                    placa.innerHTML= ``
+                 
+
+
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao exibir id!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+    
+    
+
+
+
+    
+    
+</script>
+
+<script>
+    // HELP DESK ----------------------------------- //
+  
+        window.fwSettings={
+        'widget_id':72000000689
+        };
+        !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()  
+  
+    //-----------------------------------------------//
+    </script>
